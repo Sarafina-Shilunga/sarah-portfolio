@@ -29,7 +29,7 @@ p{
 nav{
     display:flex; 
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding: 20px 50px;
     background-color:#E4DDCB;
     color: #4C042D;
@@ -326,3 +326,106 @@ header::after{
         width:100%;
     }
 }
+
+.project-details{
+    display: none;
+}
+.project-details.show{
+    display:block;
+}
+
+#menu-button{
+    display:none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #4c042d;
+    cursor: pointer;
+}
+@media (max-width:768px){
+    nav{
+        position: relative;
+        padding: 20px;
+    }
+    #menu-button{
+        display: block;
+        margin-left: auto;
+        background: none;
+        border: none;
+        font-size: 26px;
+        color:#4c042d;
+        cursor: pointer;
+    }
+    .nav-links{
+        display: none !important;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        background-color: #e4ddcb;
+        border:1px solid #ba6595;
+        border-radius: 15px;
+        z-index: 1000;
+    }
+    .nav-links.show{
+        display:flex !important;
+    }
+}
+.dark-mode{
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+body.dark-mode{
+    background-color:#130e12 ;
+    color:#e19fc7;
+}
+body.dark-mode a{
+    color:#ba6595;
+}
+body.dark-mode nav{
+    background-color: #130e12;
+}
+body.dark-mode nav a{
+    color: #e19fc7;
+}
+body.dark-mode nav div a:hover{
+    color:#4C042D;
+}
+body.dark-mode .btn-outline{
+    background: transparent;
+    color: #e19fc7;
+}
+body.dark-mode #projects h2{
+    color: #e19fc7;
+}
+body.dark-mode #skills{
+    border-color: #8b3a5a;
+}
+body.dark-mode .skills-list span{
+    background-color: #241B1F;
+    color: #E4DDCB;
+    border-color: #e19fc7;
+}
+body.dark-mode .nav-links {
+    background-color: #130e12;
+    border-color: #ba6595;
+}
+body.dark-mode #menu-button{
+    color:#e19fc7;
+}
+#dark-mode{
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+body, nav,.btn, .skills-list span, #contct a{
+    transition: background-color 0.3s, color 0.3s,  border-color 0.3s;
+} 
